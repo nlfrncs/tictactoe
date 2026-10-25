@@ -1,5 +1,6 @@
 from game import new_game
 import common
+import sys
 
 def main() -> None:
     startup()
@@ -34,7 +35,6 @@ def menu() -> None:
             print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
             print("")
 
-        # hindi mo pa maayos yung pag update ng player score
         else:
             print("")
             print("SCORE:")
@@ -53,6 +53,8 @@ def menu() -> None:
         elif option == "h":
             how_to_play()
         elif option == "q":
-            pass
+            sys.exit(0)
+        else:
+            print("Not a valid menu option, please try input again.")
 
 main()

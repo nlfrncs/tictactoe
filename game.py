@@ -1,11 +1,10 @@
 import os
 import common
-# from common import new_board, player1_score, player2_score, game_over, win_patterns, valid_slots
 
 board = []
 
 def print_board(board) -> None:
-    # os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(f"{board[1]}|{board[2]}|{board[3]}")
     print(f"{board[4]}|{board[5]}|{board[6]}")
     print(f"{board[7]}|{board[8]}|{board[9]}")
@@ -32,7 +31,6 @@ def shoot(player: int, gboard: list[str]) -> list[str]:
     if common.game_over == True:
         return gboard
 
-    # nung last tumira si Player1 para sa tie, pinapatira pa rin si player 2
     if " " not in gboard[1:]:
         print("Tie game!")
         common.game_over = True
