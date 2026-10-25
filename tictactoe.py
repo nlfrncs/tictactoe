@@ -1,6 +1,7 @@
 from game import new_game
 import common
 import sys
+import os
 
 def main() -> None:
     startup()
@@ -20,6 +21,7 @@ def how_to_play() -> None:
     print("7|8|9")
     print("")
     print("First turn alternates to each player each game.")
+    print("")
 
 def menu() -> None:
     while 1:
@@ -51,10 +53,13 @@ def menu() -> None:
         if option == "n":
             new_game()
         elif option == "h":
+            os.system('cls' if os.name == 'nt' else 'clear')
             how_to_play()
         elif option == "q":
             sys.exit(0)
         else:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("Not a valid menu option, please try input again.")
+            print("")
 
 main()
