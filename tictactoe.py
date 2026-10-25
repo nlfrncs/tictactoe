@@ -25,29 +25,16 @@ def how_to_play() -> None:
 
 def menu() -> None:
     while 1:
-        if common.player1_score == 0 and common.player2_score == 0:
-            print("")
-            print("GAME MENU")
-            print("Input:")
-            print("'n' to start game")
-            print("'h' how to play")
-            print("'q' to quit")
-            print("")
-            print("SCORE:")
-            print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
-            print("")
-
-        else:
-            print("")
-            print("SCORE:")
-            print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
-            print("")
-            print("GAME MENU")
-            print("Input:")
-            print("'n' to start game")
-            print("'h' how to play")
-            print("'q' to quit")
-            print("")
+        print("")
+        print("GAME MENU")
+        print("Input:")
+        print("'n' to start game")
+        print("'h' how to play")
+        print("'q' to quit")
+        print("")
+        print("SCORE:")
+        print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
+        print("")
 
         option = input()
         if option == "n":
