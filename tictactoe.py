@@ -1,5 +1,5 @@
 from game import new_game
-from common import player1_score, player2_score
+import common
 
 def main() -> None:
     startup()
@@ -18,10 +18,11 @@ def how_to_play() -> None:
     print("4|4|6")
     print("7|8|9")
     print("")
+    print("First turn alternates to each player each game.")
 
 def menu() -> None:
     while 1:
-        if player1_score == 0 and player2_score == 0:
+        if common.player1_score == 0 and common.player2_score == 0:
             print("")
             print("GAME MENU")
             print("Input:")
@@ -30,21 +31,21 @@ def menu() -> None:
             print("'q' to quit")
             print("")
             print("SCORE:")
-            print(f"Player 1: {player1_score}   Player 2: {player2_score}")
+            print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
             print("")
 
         # hindi mo pa maayos yung pag update ng player score
-        # else:
-        #     print("")
-        #     print("SCORE:")
-        #     print(f"Player 1: {player1_score}   Player 2: {player2_score}")
-        #     print("")
-        #     print("GAME MENU")
-        #     print("Input:")
-        #     print("'n' to start game")
-        #     print("'h' how to play")
-        #     print("'q' to quit")
-        #     print("")
+        else:
+            print("")
+            print("SCORE:")
+            print(f"Player 1: {common.player1_score}   Player 2: {common.player2_score}")
+            print("")
+            print("GAME MENU")
+            print("Input:")
+            print("'n' to start game")
+            print("'h' how to play")
+            print("'q' to quit")
+            print("")
 
         option = input()
         if option == "n":
